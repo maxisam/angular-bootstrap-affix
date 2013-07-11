@@ -1,0 +1,11 @@
+{
+  "name": "angular-bootstrap.affix",
+  "version": "0.2.0",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "angular": "latest",
+    "angular-mocks": "latest",
+    "jquery": "latest"
+  }
+}
