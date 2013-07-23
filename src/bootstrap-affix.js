@@ -28,12 +28,10 @@ angular.module('mgcrea.bootstrap.affix', ['mgcrea.jquery', 'mgcrea.debounce'])
         affix = false;
       }
 
-      console.warn('affix', affix);
       if (affixed === affix) return;
 
       affixed = affix;
       unpin = affix === 'bottom' ? position.top - scrollTop : null;
-      console.warn('unpin', unpin);
 
       el.removeClass(reset).addClass('affix' + (affix ? '-' + affix : ''));
 
@@ -43,11 +41,11 @@ angular.module('mgcrea.bootstrap.affix', ['mgcrea.jquery', 'mgcrea.debounce'])
       restrict: 'EAC',
       link: function postLink(scope, iElement, iAttrs) {
 
-        angular.element($window).bind('scroll.affix', function() {
+        angular.element($window).bind('scroll', function() {
           checkPosition(scope, iElement, iAttrs);
         });
 
-        angular.element($window).bind('click.affix', function() {
+        angular.element($window).bind('click', function() {
           setTimeout(function() {
             checkPosition(scope, iElement, iAttrs);
           }, 1);
