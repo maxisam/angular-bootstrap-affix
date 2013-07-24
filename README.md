@@ -13,8 +13,10 @@ Download the [production version][min] or the [development version][max].
 In your web page:
 
 ```html
-<script src="angular.js"></script>
-<script src="dist/angular-bootstrap-affix.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-jquery/dist/angular-jquery.min.js"></script>
+<script src="bower_components/angular-bootstrap-affix/dist/angular-bootstrap-affix.min.js"></script>
+<script src="scripts/app.js"></script>
 ```
 
 In your app.js:
