@@ -1,4 +1,4 @@
-// Generated on 2013-07-11 using generator-angular-component 0.2.1
+// Generated on 2013-07-11 using generator-angular-component v0.2.1
 'use strict';
 
 module.exports = function(grunt) {
@@ -139,14 +139,9 @@ module.exports = function(grunt) {
         banner: '<%= meta.banner %>'
       },
       dist: {
-        src: ['<%= yo.src %>/<%= pkg.name %>.js'],
+        src: ['<%= yo.src %>/*.js'],
         dest: '<%= yo.dist %>/<%= pkg.name %>.js'
       }
-      // dist: {
-      //   files: {
-      //     '/.js': '/.js'
-      //   }
-      // }
     },
     concat: {
       options: {
