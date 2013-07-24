@@ -14,7 +14,7 @@ In your web page:
 
 ```html
 <script src="angular.js"></script>
-<script src="dist/bootstrap.affix.min.js"></script>
+<script src="dist/angular-bootstrap-affix.min.js"></script>
 ```
 
 In your app.js:

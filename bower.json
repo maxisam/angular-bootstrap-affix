@@ -2,10 +2,10 @@
   "name": "angular-bootstrap-affix",
   "version": "0.2.0",
   "dependencies": {
+    "angular-jquery": "~0.2.1"
   },
   "devDependencies": {
     "angular": "latest",
-    "angular-mocks": "latest",
-    "jquery": "latest"
+    "angular-mocks": "latest"
   }
 }

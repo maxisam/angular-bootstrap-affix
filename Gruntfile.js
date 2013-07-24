@@ -166,6 +166,16 @@ module.exports = function(grunt) {
         src: '<%= concat.dist.dest %>',
         dest: '<%= yo.dist %>/<%= pkg.name %>.min.js'
       }
+    },
+    bump: {
+      options: {
+        files: ['package.json', 'bower.json'],
+        commitMessage: 'chore(release): bump v<%= pkg.version %>',
+        tagName: 'v<%= pkg.version %>',
+        tagMessage: 'chore(release): bump v<%= pkg.version %>',
+        commitFiles: ['-a'],
+        pushTo: 'github'
+      }
     }
   });
 
