@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('mgcrea.bootstrap.affix', ['mgcrea.jquery', 'mgcrea.debounce'])
+angular.module('mgcrea.bootstrap.affix', ['mgcrea.jquery'])
 
-  .directive('bsAffix', function($window, $location, $routeParams, debounce, $) {
+  .directive('bsAffix', function($window, $location, $routeParams, debounce, dimensions) {
 
     var affixed;
     var unpin = null;
@@ -11,8 +11,8 @@ angular.module('mgcrea.bootstrap.affix', ['mgcrea.jquery', 'mgcrea.debounce'])
 
       var scrollTop = window.pageYOffset;
       var scrollHeight = document.body.scrollHeight;
-      var position = $(el[0]).offset();
-      var height = $(el[0]).height();
+      var position = dimensions.offset.call(el[0]);
+      var height = dimensions.height.call(el[0]);
       var offsetTop = options.offsetTop * 1;
       var offsetBottom = options.offsetBottom * 1;
       var reset = 'affix affix-top affix-bottom';
