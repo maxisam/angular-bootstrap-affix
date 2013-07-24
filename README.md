@@ -7,8 +7,8 @@ The affix behavior enables dynamic pinning of a DOM element during page scrollin
 
 Download the [production version][min] or the [development version][max].
 
-[min]: https://raw.github.com/mgcrea/jquery-bootstrap.affix/master/dist/angular-bootstrap.affix.min.js
-[max]: https://raw.github.com/mgcrea/jquery-bootstrap.affix/master/dist/angular-bootstrap.affix.js
+[min]: https://raw.github.com/mgcrea/jquery-bootstrap-affix/master/dist/angular-bootstrap-affix.min.js
+[max]: https://raw.github.com/mgcrea/jquery-bootstrap-affix/master/dist/angular-bootstrap-affix.js
 
 In your web page:
 
