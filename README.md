@@ -5,7 +5,9 @@ The affix behavior enables dynamic pinning of a DOM element during page scrollin
 
 ## Getting Started
 
-Download the [production version][min] or the [development version][max].
++ Install with bower, `bower install angular-bootstrap-affix --save`
+
++ Or download the [production version][min] or the [development version][max].
 
 [min]: https://raw.github.com/mgcrea/jquery-bootstrap-affix/master/dist/angular-bootstrap-affix.min.js
 [max]: https://raw.github.com/mgcrea/jquery-bootstrap-affix/master/dist/angular-bootstrap-affix.js
