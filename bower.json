@@ -1,6 +1,7 @@
 {
   "name": "angular-bootstrap-affix",
   "version": "0.2.1",
+  "ignore": [],
   "dependencies": {
     "angular-jquery": "~0.2.1"
   },
