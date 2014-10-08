@@ -31,7 +31,17 @@ angular.module('mgcrea.bootstrap.affix', ['mgcrea.jquery'])
       instance.unpin = affix === 'bottom' ? position.top - scrollTop : null;
 
       el.removeClass(reset).addClass('affix' + (affix ? '-' + affix : ''));
+    };
 
+    var checkCallbacks = function(scope, instance, iElement, iAttrs) {
+      if(instance.affixed) {
+        if(iAttrs.onUnaffix)
+          eval("scope." + iAttrs.onUnaffix);
+      }
+      else {
+        if(iAttrs.onAffix)
+          eval("scope." + iAttrs.onAffix);
+      }
     };
 
     return {
@@ -41,14 +51,15 @@ angular.module('mgcrea.bootstrap.affix', ['mgcrea.jquery'])
 
         angular.element($window).bind('scroll', function() {
           checkPosition(instance, iElement, iAttrs);
+          checkCallbacks(scope, instance, iElement, iAttrs);
         });
 
         angular.element($window).bind('click', function() {
           setTimeout(function() {
             checkPosition(instance, iElement, iAttrs);
+            checkCallbacks(scope, instance, iElement, iAttrs);
           }, 1);
         });
-
       }
     };
 
