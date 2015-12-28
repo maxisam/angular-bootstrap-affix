@@ -1,15 +1,15 @@
 {
   "name": "angular-bootstrap-affix",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "bootstrap-affix",
   "keywords": [
     "angular"
   ],
-  "homepage": "https://github.com/mgcrea/bootstrap-affix",
-  "bugs": "https://github.com/mgcrea/bootstrap-affix/issues",
+  "homepage": "https://github.com/maxisam/angular-bootstrap-affix",
+  "bugs": "https://github.com/maxisam/angular-bootstrap-affix",
   "author": {
-    "name": "Olivier Louvignes",
-    "email": "olivier@mg-crea.com",
+    "name": "Olivier Louvignes (original), maxisam",
+    "email": "maxisam@gmail.com",
     "url": "https://github.com/mgcrea"
   },
   "repository": {
