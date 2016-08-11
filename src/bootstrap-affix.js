@@ -7,6 +7,7 @@ angular.module('mgcrea.bootstrap.affix', ['mgcrea.jquery'])
     var checkPosition = function(instance, el, options) {
 
       var scrollTop = window.pageYOffset;
+      var windowHeight = window.innerHeight;
       var scrollHeight = document.body.scrollHeight;
       var position = dimensions.offset.call(el[0]);
       var height = dimensions.height.call(el[0]);
@@ -14,23 +15,22 @@ angular.module('mgcrea.bootstrap.affix', ['mgcrea.jquery'])
       var offsetBottom = options.offsetBottom * 1;
       var reset = 'affix affix-top affix-bottom';
       var affix;
-
-      if(instance.unpin !== null && (scrollTop + instance.unpin <= position.top)) {
-        affix = false;
-      } else if(offsetBottom && (position.top + height >= scrollHeight - offsetBottom)) {
-        affix = 'bottom';
-      } else if(offsetTop && scrollTop <= offsetTop) {
+      
+      if(instance.originTop==null){
+          instance.originTop = position.top;
+      }
+     if (windowHeight >= height && instance.originTop <= scrollTop) {
         affix = 'top';
+      } else if (windowHeight <= height && scrollTop >= instance.originTop) {
+        affix = 'bottom';
       } else {
         affix = false;
       }
-
-      if (instance.affixed === affix) return;
-
+      if (instance.affixed === affix)
+        return;
       instance.affixed = affix;
-      instance.unpin = affix === 'bottom' ? position.top - scrollTop : null;
-
-      el.removeClass(reset).addClass('affix' + (affix ? '-' + affix : ''));
+      
+      el.removeClass(reset).addClass('' + (affix ? 'affix affix-' + affix : ''));
     };
 
     var checkCallbacks = function(scope, instance, iElement, iAttrs) {
