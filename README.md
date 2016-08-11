@@ -40,4 +40,12 @@ angular.module('myApp', ['mgcrea.bootstrap.affix'])
   <div class="iphone-content">
   </div>
 </div>
+
+.affix-top {
+    top: 30px; // css to define
+}
+
+.affix-bottom {
+    bottom: 0; // css to define
+}
 ```
