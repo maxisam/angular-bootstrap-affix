@@ -13,7 +13,6 @@ angular
       var offsetBottom = options.offsetBottom * 1;
       var reset = "affix affix-top affix-bottom";
       var affix;
-
       if (instance.originTop == null) {
         instance.originTop = position.top;
       }
