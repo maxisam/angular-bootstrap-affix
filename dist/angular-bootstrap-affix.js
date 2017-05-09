@@ -58,6 +58,7 @@ angular.module('mgcrea.bootstrap.affix', ['mgcrea.jquery']).directive('bsAffix',
       restrict: 'EAC',
       link: function postLink(scope, iElement, iAttrs) {
         var instance = { unpin: null };
+        //The binding element must be "scrollable"
         angular.element($window).bind('scroll', function () {
           checkPosition(instance, iElement, iAttrs);
           checkCallbacks(scope, instance, iElement, iAttrs);
