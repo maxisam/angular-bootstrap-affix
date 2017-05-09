@@ -16,10 +16,10 @@ angular.module('mgcrea.bootstrap.affix', ['mgcrea.jquery'])
       var reset = 'affix affix-top affix-bottom';
       var affix;
       
-      if(instance.originTop==null){
+      if(instance.originTop == null) {
           instance.originTop = position.top;
       }
-     if (windowHeight >= height && instance.originTop <= scrollTop) {
+      if (windowHeight >= height && instance.originTop <= scrollTop) {
         affix = 'top';
       } else if (windowHeight <= height && scrollTop >= instance.originTop) {
         affix = 'bottom';
@@ -37,8 +37,7 @@ angular.module('mgcrea.bootstrap.affix', ['mgcrea.jquery'])
       if(instance.affixed) {
         if(iAttrs.onUnaffix)
           eval("scope." + iAttrs.onUnaffix);
-      }
-      else {
+      } else {
         if(iAttrs.onAffix)
           eval("scope." + iAttrs.onAffix);
       }
@@ -62,5 +61,4 @@ angular.module('mgcrea.bootstrap.affix', ['mgcrea.jquery'])
         });
       }
     };
-
   });
